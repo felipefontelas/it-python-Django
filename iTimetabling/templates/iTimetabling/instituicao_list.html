@@ -6,15 +6,13 @@
 <h1>
     Intellgent Timetabling
 </h1>
+{%for instituicao in instituicoes %}
 <div>
-    <h2>Nome da Instituição</h2>
-    <p>Licença: xxxxxxx</p>
+    <h2><a href=#>{{instituicao.nomeInstituicao}}</a></h2>
+    <p>Licença: {{instituicao.licencaInstituicao}}</p>
     <p>Ver tabela | Editar | Excluir</p>
 </div>
-<div>
-    <h2>Nome da Instituição</h2>
-    <p>Licença: xxxxxxx</p>
-    <p>Ver tabela | Editar | Excluir</p>
-</div>
+{% endfor %}
+    
 
 </html>
