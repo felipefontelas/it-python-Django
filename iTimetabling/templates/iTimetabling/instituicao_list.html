@@ -2,17 +2,29 @@
 
 <head>
     <title>IT - Intelligent Timetabling</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
-<h1>
-    Intellgent Timetabling
-</h1>
-{%for instituicao in instituicoes %}
-<div>
-    <h2><a href=#>{{instituicao.nomeInstituicao}}</a></h2>
-    <p>Licença: {{instituicao.licencaInstituicao}}</p>
-    <p>Ver tabela | Editar | Excluir</p>
+<div class="title">
+    <h1>
+        Intellgent Timetabling
+    </h1>
 </div>
-{% endfor %}
-    
+<div class="institution">
+    {%for instituicao in instituicoes %}
+    <div class="institution_single">
+        <h2>
+            <a href=#>{{instituicao.nomeInstituicao}}</a>
+        </h2>
+        <p>Licença: {{instituicao.licencaInstituicao}}</p>
+        <p><a href="#">Ver tabela</a> | <a href="#">Editar</a> | <a href="#">Excluir</a></p>
+    </div>
+    {% endfor %}
+</div>
+<div>
+    Hello There!
+</div>
+
 
 </html>

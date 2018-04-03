@@ -1,0 +1,18 @@
+.institution{
+    float: right;
+    padding: 15px;
+    margin-right: 5%;
+    overflow: scroll;
+    height: 70%;
+    border: 0.5px solid lightblue;
+}
+
+.institution_single{
+    border: 0.5px solid lightblue;
+    padding: 15px;
+}
+
+.title{
+    padding: 15px;
+    margin-left: 5%;
+}
