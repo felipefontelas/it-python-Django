@@ -5,11 +5,19 @@
     overflow: scroll;
     height: 70%;
     border: 0.5px solid lightblue;
+    margin-top: 2.5%;
 }
 
 .institution_single{
     border: 0.5px solid lightblue;
     padding: 15px;
+}
+
+.form{
+    text-align: center;
+    width: 70%;
+    padding: 15px;
+    margin-left: 5%;
 }
 
 .title{
