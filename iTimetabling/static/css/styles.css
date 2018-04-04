@@ -20,7 +20,27 @@
     margin-left: 5%;
 }
 
+.form h1{
+    padding-bottom: 15px;
+}
+
+.form-group{
+    width: 60%;
+    display: inline-block;
+    justify-content: center;
+}
+
+.form-control{
+    margin-bottom: 15px;
+}
+
 .title{
+    align-items: center;
     padding: 15px;
+    background-color: lightgray;
+}
+
+.title h1{
     margin-left: 5%;
+    font-family: 'Times New Roman', Times, serif;
 }

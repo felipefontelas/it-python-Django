@@ -1,21 +1,11 @@
-<html>
+{% extends "iTimetabling/layout.html" %}
 
-<head>
-    <title>IT - Intelligent Timetabling</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-<div class="title">
-    <h1>
-        Intellgent Timetabling
-    </h1>
-</div>
+{% block content %}
 <div class="institution">
     {%for instituicao in instituicoes %}
     <div class="institution_single">
         <h2>
-            <a href=#>{{instituicao.nomeInstituicao}}</a>
+            <a href='{% url 'instituicao_detail' pk=instituicao.pk %}'>{{instituicao.nomeInstituicao}}</a>
         </h2>
         <p>Licença: {{instituicao.licencaInstituicao}}</p>
         <p>
@@ -28,6 +18,11 @@
 </div>
 <div class="form">
     <h1>Cadastre sua instituiçao</h1>
+    <form>
+        <div class="form-group">
+            <input class="form-control" placeholder="*Nome da instituição">
+            <input class="form-control" placeholder="*Licença da instituição">
+        </div>
+    </form>
 </div>
-
-</html>
+{% endblock %}
