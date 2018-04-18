@@ -10,19 +10,24 @@
         <p>Licença: {{instituicao.licencaInstituicao}}</p>
         <p>
             <a href="#">Ver tabela</a> |
-            <a href="#">Editar</a> |
+            <a href="{% url 'instituicao_edit' pk=instituicao.pk %}">Editar</a> |
             <a href="#">Excluir</a>
         </p>
     </div>
     {% endfor %}
 </div>
-<div class="form">
-    <h1>Cadastre sua instituiçao</h1>
-    <form>
-        <div class="form-group">
-            <input class="form-control" placeholder="*Nome da instituição">
-            <input class="form-control" placeholder="*Licença da instituição">
-        </div>
-    </form>
+
+
+
+<div class="home">
+    <h1>O que é o Intelligent Timetabling?</h1>
+    <h3>
+        O Intelligent Timetabling é um programa para solucionar problemas em tableas de horários escolares. Feito em Python, utilizando meta-heurísticas e inteligência artificial.
+        O IT pretende facilitar a montagem de agendamento de maneira rápida e eficaz.
+    </h3>
+    <h3>
+        Comece a usar! Cadastre sua instituição.
+    </h3>
+    <a href="{% url 'instituicao_new' %}" class="btn btn-primary">Adicionar instituição</a>
 </div>
 {% endblock %}

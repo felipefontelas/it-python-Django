@@ -1,0 +1,13 @@
+{% extends 'iTimetabling/layout.html' %}
+
+{% block content %}
+
+<h1 class="form_title">Nova instituição</h1>
+<form method="POST" class="post-form">{% csrf_token %}
+    <div class="form_add">
+        {{ instituicao.as_p }}
+        <button type="submit" class="save btn btn-default">Salvar</button>
+    </div>
+</form>
+
+{% endblock  %}

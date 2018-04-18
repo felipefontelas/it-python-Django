@@ -8,7 +8,7 @@ from django.utils import timezone
 
 class Instituicao(models.Model):
     nomeInstituicao = models.CharField(max_length = 200)
-    licencaInstituicao = models.TextField()
+    licencaInstituicao = models.CharField(max_length = 200)
     created_at = models.DateTimeField(default=timezone.now)
 
     def store(self):
