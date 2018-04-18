@@ -1,8 +1,14 @@
-{% extends 'iTimetabling/layout.html' %} 
-
-{% block content %}
-<div class="home">
-    <h1>{{instituicao.nomeInstituicao}}</h1>
-    <p>{{instituicao.licencaInstituicao}}</p>
+{% extends 'iTimetabling/layout.html' %} {% block content %}
+<div class="detail">
+    <div class="container">
+        <div class="jumbotron  instituicao_info">
+            <div class="info_detail">
+                <img class="instituicao_pic" src="/static/img/default-user.png">
+                <h2>{{instituicao.nomeInstituicao}}</h2>
+                <label>Licença: </label>
+                <span>{{instituicao.licencaInstituicao}}</span>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
