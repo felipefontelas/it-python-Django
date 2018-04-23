@@ -44,3 +44,8 @@ def instituicao_edit(request, pk):
     else:
         instituicao = InstituicaoForm(instance=instituicao)
     return render(request, 'iTimetabling/instituicao_edit.html', {'instituicao': instituicao})
+
+def instituicao_delete(request, pk):
+    instituicao = get_object_or_404(Instituicao, pk=pk)
+    instituicao.delete()
+    return redirect('/')

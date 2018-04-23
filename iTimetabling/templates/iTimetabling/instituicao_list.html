@@ -1,6 +1,9 @@
 {% extends "iTimetabling/layout.html" %}
 
 {% block content %}
+
+
+{% if instituicoes %}
 <div class="institution">
     {%for instituicao in instituicoes %}
     <div class="institution_single">
@@ -9,14 +12,14 @@
         </h2>
         <p>Licença: {{instituicao.licencaInstituicao}}</p>
         <p>
-            <a href="#">Ver tabela</a> |
+            <a href="{% url 'instituicao_detail' pk=instituicao.pk %}">Ver tabela</a> |
             <a href="{% url 'instituicao_edit' pk=instituicao.pk %}">Editar</a> |
-            <a href="#">Excluir</a>
+            <a href="{% url 'instituicao_delete' pk=instituicao.pk %}">Excluir</a>
         </p>
     </div>
     {% endfor %}
 </div>
-
+{% endif %}
 
 
 <div class="home">
